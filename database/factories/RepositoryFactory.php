@@ -2,8 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Repository;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Repository;
+use App\Models\User;
+
 
 class RepositoryFactory extends Factory
 {
@@ -22,6 +24,8 @@ class RepositoryFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => User::factory()
+
             //
         ];
     }
