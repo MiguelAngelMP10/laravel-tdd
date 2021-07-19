@@ -49,4 +49,14 @@ class RepositoryController extends Controller
 
         return redirect()->route('repositories.index');
     }
+
+
+    public function show(Request $request, Repository $repository)
+    {
+        if ($request->user()->id != $repository->user_id) {
+            abort(403);
+        }
+
+        return view('repositories.show', compact('repository'));
+    }
 }
