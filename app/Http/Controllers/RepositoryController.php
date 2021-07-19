@@ -59,4 +59,13 @@ class RepositoryController extends Controller
 
         return view('repositories.show', compact('repository'));
     }
+
+    public function edit(Request $request, Repository $repository)
+    {
+        if ($request->user()->id != $repository->user_id) {
+            abort(403);
+        }
+
+        return view('repositories.edit', compact('repository'));
+    }
 }
