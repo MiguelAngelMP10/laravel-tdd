@@ -13,11 +13,12 @@
                     @method('PUT')
 
                     <label class="block font-medium text-sm text-gray-700">URL *</label>
-                    <input class="form-input w-full rounded-md shadow-sm" type="text" name="url" value="{{ $repository->url }}">
+                    <input class="form-input w-full rounded-md shadow-sm" type="text" name="url"
+                        value="{{ $repository->url }}">
 
-                    <label class="block font-medium text-sm text-gray-700">URL *</label>
-                    <textarea class="form-input w-full rounded-md shadow-sm" type="text" name="description">{{ $repository->description }}</textarea>
-
+                    <label class="block font-medium text-sm text-gray-700">Descripción *</label> <textarea
+                        class="form-input w-full rounded-md shadow-sm" type="text"
+                        name="description">{{ $repository->description }}</textarea>
                     <hr class="my-4">
 
                     <input type="submit" value="Editar" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-md">
